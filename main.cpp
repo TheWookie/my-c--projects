@@ -13,7 +13,7 @@ int main(int argc, char *args[]) {
   SDL_Window *window = NULL;
   SDL_Surface *screenSurface = NULL;
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-    printf("SDL couldn't be initialized. SDL_ERROR: %s%n", SDL_GetError());
+    printf("SDL couldn't be initialized. SDL_ERROR: %s\n", SDL_GetError());
     return 1;
   }
   window = SDL_CreateWindow(
@@ -22,7 +22,7 @@ int main(int argc, char *args[]) {
       SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN
   );
   if (window == NULL) {
-    printf("Window couldn't be created. SDL_ERROR: %s%n", SDL_GetError());
+    printf("Window couldn't be created. SDL_ERROR: %s\n", SDL_GetError());
     return 1;
   }
   screenSurface = SDL_GetWindowSurface(window);
