@@ -3,7 +3,7 @@ project(ant_farm_sdl)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp EnterToQuit.h)
+set(SOURCE_FILES main.cpp PressEnterToQuit.h)
 add_executable(ant_farm_sdl ${SOURCE_FILES})
 
 #SDL additions. These were taken from github: https://github.com/tcbrindle/sdl2-cmake-scripts

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <SDL2/SDL.h>
-#include "EnterToQuit.h"
+#include "PressEnterToQuit.h"
 
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
@@ -8,7 +8,7 @@ const int SCREEN_HEIGHT = 480;
 using namespace std;
 
 int main(int argc, char *args[]) {
-  EnterToQuit holdsOnQuit;
+  PressEnterToQuit holdsOnQuit;
 
   SDL_Window *window = NULL;
   SDL_Surface *screenSurface = NULL;
