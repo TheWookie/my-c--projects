@@ -8,14 +8,18 @@ const int SCREEN_HEIGHT = 480;
 using namespace std;
 
 int main(int argc, char *args[]) {
-    SDL_Window *window = NULL;
-    SDL_Surface *screenSurface = NULL;
-    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-        const char *error = SDL_GetError();
-        printf("SDL_ERROR: %s%n", error);
-        return 1;
-    }
+  SDL_Window *window = NULL;
+  SDL_Surface *screenSurface = NULL;
+  if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+    const char *error = SDL_GetError();
+    printf("SDL_ERROR: %s%n", error);
+    return 1;
+  }
+  window = SDL_CreateWindow(
+      "SDL Tutorial",
+      SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+      SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN
+  );
 
-
-    return 0;
+  return 0;
 }
